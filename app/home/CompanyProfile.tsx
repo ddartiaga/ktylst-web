@@ -10,7 +10,6 @@ export default function CompanyProfile() {
                             <figure className="rounded">
                                 <img
                                     src="/app/img/young-asian-business-creative-team-work-together.jpg"
-                                    srcSet="/app/img/young-asian-business-creative-team-work-together@2x.jpg 2x"
                                     alt=""
                                 />
                             </figure>
@@ -20,7 +19,6 @@ export default function CompanyProfile() {
                             <figure className="rounded">
                                 <img
                                     src="/app/img/group-of-young-asian-business-team-creative-businesspeople.jpg"
-                                    srcSet="/app/img/group-of-young-asian-business-team-creative-businesspeople@2x.jpg 2x"
                                     alt=""
                                 />
                             </figure>
@@ -30,7 +28,6 @@ export default function CompanyProfile() {
                             <figure className="rounded mx-md-5">
                                 <img
                                     src="/app/img/business-people-clapping-at-an-office.jpg"
-                                    srcSet="/app/img/business-people-clapping-at-an-office@2x.jpg 2x"
                                     alt=""
                                 />
                             </figure>

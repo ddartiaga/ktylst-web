@@ -1,5 +1,3 @@
-import ContactForm from "./ContactForm";
-
 const slides = [
     {
         image: "/app/img/hero/network-switch-and-ethernet-cables.jpg",
@@ -88,7 +86,7 @@ const Slide = ({ image, title, description, labelClass, cta, ctaLink }: { image:
                 </div>
             </div>
         </div>
-        
+
     </>);
 }
 
@@ -109,10 +107,10 @@ export default function Hero() {
                         <Slide key={index} {...slide} />
                     ))}
                 </div>
-                {/*/.swiper-wrapper */}
+                
             </div>
-            {/* /.swiper */}
+            
         </div>
-        {/* /.swiper-container */}
+        
     </section>);
 }
