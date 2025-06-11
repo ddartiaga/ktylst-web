@@ -4,6 +4,8 @@ import Link from "next/link";
 
 import "@/public/assets/css/plugins.css";
 import "@/public/assets/css/style.css";
+import Address from "./contact/Address";
+import PhoneNumber from "./contact/PhoneNumber";
 
 export const metadata: Metadata = {
   title: {
@@ -49,7 +51,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
                 <div className="offcanvas-body ms-lg-auto d-flex flex-column h-100">
                   <ul className="navbar-nav">
                     <li className="nav-item">
-                      <a className="nav-link" href="#" data-bs-toggle="dropdown">
+                      <a className="nav-link" href="/">
                         Home
                       </a>
                     </li>
@@ -94,13 +96,13 @@ export default async function RootLayout({ children }: { children: React.ReactNo
                       </ul>
                     </li>
                     <li className="nav-item">
-                      <a className="nav-link" href="#" data-bs-toggle="dropdown">
+                      <a className="nav-link" href="/partner-program" >
                         Partner Program
                       </a>
                     </li>
                     <li className="nav-item">
-                      <a className="nav-link" href="#" data-bs-toggle="dropdown">
-                        Careers
+                      <a className="nav-link" href="/contact" >
+                        Contact Us
                       </a>
                     </li>
                   </ul>
@@ -189,13 +191,9 @@ export default async function RootLayout({ children }: { children: React.ReactNo
               {/* /.widget */}
               <div className="widget mb-8">
                 <h4 className="widget-title text-white mb-3">Contact Info</h4>
-                <address>
-                  {" "}
-                  Titan Street, Amaris Homes Phase 2, Burol Main <br /> Dasmarinas City,
-                  Cavite 4114
-                </address>
-                <a href="mailto:first.last@email.com">katalysttechservices@gmail.com</a>
-                <br /> 0917-872-1024
+                <Address />
+                <a href="mailto:>katalysttechservices@gmail.com">katalysttechservices@gmail.com</a>
+                <PhoneNumber />
               </div>
               {/* /.widget */}
               <div className="widget mb-8">
@@ -293,13 +291,9 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             <div className="col-md-4 col-lg-3">
               <div className="widget">
                 <h4 className="widget-title text-white mb-3">Get in Touch</h4>
-                <address className="pe-xl-15 pe-xxl-17">
-                  Titan Street, Amaris Homes Phase 2, Burol Main, Dasmarinas City,
-                  Cavite 4114
-                </address>
+                <Address />
                 <a href="mailto:#">katalysttechservices@gmail.com</a>
-                <br /> 0966-684-1752
-                <br /> 0917-872-1024
+                <PhoneNumber />
               </div>
               {/* /.widget */}
             </div>
