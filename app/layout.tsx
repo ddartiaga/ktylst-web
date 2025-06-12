@@ -56,7 +56,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
                       </a>
                     </li>
                     <li className="nav-item">
-                      <a className="nav-link" href="#" data-bs-toggle="dropdown">
+                      <a className="nav-link" href="/about">
                         About
                       </a>
                     </li>
@@ -142,7 +142,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
                       <i className="uil uil-info-circle" />
                     </a>
                   </li>
-                  <li className="nav-item">
+                  {/* <li className="nav-item">
                     <a
                       className="nav-link"
                       data-bs-toggle="offcanvas"
@@ -150,7 +150,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
                     >
                       <i className="uil uil-search" />
                     </a>
-                  </li>
+                  </li> */}
                   <li className="nav-item d-lg-none">
                     <button className="hamburger offcanvas-nav-btn">
                       <span />
@@ -199,22 +199,25 @@ export default async function RootLayout({ children }: { children: React.ReactNo
               <div className="widget mb-8">
                 <h4 className="widget-title text-white mb-3">Learn More</h4>
                 <ul className="list-unstyled">
-                  <li>
+                  {/* <li>
                     <a href="#">Our Story</a>
+                  </li> */}
+                  <li>
+                    <a href="/about">About Us</a>
                   </li>
                   <li>
-                    <a href="#">Terms of Use</a>
+                    <a href="/terms-and-conditions">Terms of Use</a>
                   </li>
                   <li>
-                    <a href="#">Privacy Policy</a>
+                    <a href="/privacy-policy">Privacy Policy</a>
                   </li>
                   <li>
-                    <a href="#">Contact Us</a>
+                    <a href="/contact">Contact Us</a>
                   </li>
                 </ul>
               </div>
               {/* /.widget */}
-              <div className="widget">
+              {/* <div className="widget">
                 <h4 className="widget-title text-white mb-3">Follow Us</h4>
                 <nav className="nav social social-white">
                   <a href="#">
@@ -233,8 +236,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
                     <i className="uil uil-youtube" />
                   </a>
                 </nav>
-                {/* /.social */}
-              </div>
+              </div> */}
               {/* /.widget */}
             </div>
             {/* /.offcanvas-body */}
@@ -303,7 +305,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
                 <h4 className="widget-title text-white mb-3">Learn More</h4>
                 <ul className="list-unstyled  mb-0">
                   <li>
-                    <a href="#">About Us</a>
+                    <a href="/about">About Us</a>
                   </li>
                   <li>
                     <a href="#">Our Story</a>

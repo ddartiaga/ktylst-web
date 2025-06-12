@@ -10,7 +10,7 @@ export default function Page() {
     <Hero />
     <CompanyProfile />
     <Services />
-    <Team />
+
     <Contact />
     <div className="modal fade" id="contact-form" tabIndex={-1}>
       <div className="modal-dialog modal-dialog-centered modal-xl">
