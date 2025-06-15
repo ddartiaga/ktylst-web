@@ -1,3 +1,8 @@
+"use client";
+import { useEffect } from "react";
+import { usePathname } from 'next/navigation';
+
+
 const slides = [
     {
         image: "/app/img/hero/network-switch-and-ethernet-cables.jpg",
@@ -57,7 +62,19 @@ const slides = [
     }
 ];
 
-const Slide = ({ image, title, description, labelClass, cta, ctaLink }: { image: string, title: string, description: string, labelClass: string, cta: string, ctaLink: string }) => {
+const Slide = ({ image, title, description, labelClass, cta }: { image: string, title: string, description: string, labelClass: string, cta: string }) => {
+    const pathname = usePathname(); // triggers effect on route change
+
+    useEffect(() => {
+        const bg = document.querySelectorAll(".bg-image");
+        bg.forEach((el) => {
+            const url = el.getAttribute("data-image-src");
+            if (url) {
+                (el as HTMLElement).style.backgroundImage = `url('${url}')`;
+            }
+        });
+    }, [pathname]);
+
     return (<>
         <div
             className="swiper-slide bg-overlay bg-overlay-400 bg-dark bg-image"
@@ -90,27 +107,46 @@ const Slide = ({ image, title, description, labelClass, cta, ctaLink }: { image:
     </>);
 }
 
+declare global {
+    interface Window {
+        theme: {
+            swiperSlider: () => void;
+        }
+    }
+}
+
 export default function Hero() {
-    return (<section className="wrapper bg-dark">
-        <div
-            className="swiper-container swiper-hero dots-over"
-            data-margin={0}
-            data-autoplay="true"
-            data-autoplaytime={7000}
-            data-nav="true"
-            data-dots="true"
-            data-items={1}
-        >
-            <div className="swiper">
-                <div className="swiper-wrapper">
-                    {slides.map((slide, index) => (
-                        <Slide key={index} {...slide} />
-                    ))}
+    const pathname = usePathname(); // triggers effect on route change
+
+    useEffect(() => {
+        // Initialize Swiper after the component mounts
+        if (typeof window !== 'undefined' && window.theme) {
+            window.theme.swiperSlider();
+        }
+    }, [pathname]); // Re-initialize when route changes
+
+    return (
+        <section className="wrapper bg-dark">
+            <div
+                className="swiper-container swiper-hero dots-over"
+                data-margin={0}
+                data-autoplay="true"
+                data-autoplaytime={7000}
+                data-nav="true"
+                data-dots="true"
+                data-items={1}
+            >
+                <div className="swiper">
+                    <div className="swiper-wrapper">
+                        {slides.map((slide, index) => (
+                            <Slide key={index} {...slide} />
+                        ))}
+                    </div>
+
                 </div>
-                
+
             </div>
-            
-        </div>
-        
-    </section>);
+
+        </section>
+    );
 }

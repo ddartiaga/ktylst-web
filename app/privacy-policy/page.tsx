@@ -1,27 +1,11 @@
 import Link from "next/link";
+import PrivacyHero from "./PrivacyHero";
 
 export default function PrivacyPolicy() {
     return (
         <>
-            <section
-                className="wrapper image-wrapper bg-image bg-overlay text-white"
-                data-image-src="/app/img/privacy-policy.jpg"
-            >
-                <div className="container pt-19 pt-md-21 pb-18 pb-md-20 text-center">
-                    <div className="row">
-                        <div className="col-md-10 col-lg-8 col-xl-7 col-xxl-6 mx-auto">
-                            <h1 className="display-1 text-white mb-3">Our Privacy Policy</h1>
-                            <p className="lead fs-lg px-md-3 px-lg-7 px-xl-9 px-xxl-10">
-                                This Privacy Policy outlines how we collect, use, and protect your personal information when you visit our website.
-                            </p>
-                        </div>
-                        {/* /column */}
-                    </div>
-                    {/* /.row */}
-                </div>
-                {/* /.container */}
-            </section>
 
+            <PrivacyHero />
 
             <section className="wrapper bg-light">
                 <div className="container py-10 py-md-12">
@@ -33,12 +17,12 @@ export default function PrivacyPolicy() {
                                     <div className="mb-10">
                                         <div><strong>Effective Date: </strong>January 28, 2025</div>
                                         <div><strong>Last Updated: </strong>June 07, 2025</div>
-                                        <p className="mt-5"><strong>Katalyst IT Services</strong> ("Katalyst", "we", "our", or "us") values your privacy. This Privacy Policy explains how we collect, use, and protect personal information through our website and services.
+                                        <p className="mt-5"><strong>Katalyst IT Services</strong> (&ldquo;Katalyst&rdquo;, &ldquo;we&rdquo;, &ldquo;our&rdquo;, or &ldquo;us&rdquo;) values your privacy. This Privacy Policy explains how we collect, use, and protect personal information through our website and services.
                                             <br /><br />
                                             By using our website or services, you agree to this Privacy Policy.</p>
                                     </div>
                                     <div className="mb-10">
-                                        <h4 className="">1. Information We Collect</h4>
+                                        <h4 >1. Information We Collect</h4>
                                         <p className="lead">
                                             We may collect the following types of information:
                                         </p>
@@ -53,7 +37,7 @@ export default function PrivacyPolicy() {
 
 
                                     <div className="mb-10">
-                                        <h4 className="">2. How We Use Your Information</h4>
+                                        <h4 >2. How We Use Your Information</h4>
                                         <p className="lead">
                                             We use your information to:
                                         </p>
@@ -68,7 +52,7 @@ export default function PrivacyPolicy() {
                                     </div>
 
                                     <div className="mb-10">
-                                        <h4 className="">3. How We Share Information</h4>
+                                        <h4 >3. How We Share Information</h4>
                                         <p className="lead">
                                             We do not sell or rent your data. We may share information with:
                                         </p>
@@ -82,7 +66,7 @@ export default function PrivacyPolicy() {
                                     </div>
 
                                     <div className="mb-10">
-                                        <h4 className="">4. Cookies and Tracking</h4>
+                                        <h4 >4. Cookies and Tracking</h4>
                                         <p className="lead">
                                             We use cookies and similar technologies for:
                                         </p>
@@ -97,7 +81,7 @@ export default function PrivacyPolicy() {
 
 
                                     <div className="mb-10">
-                                        <h4 className="">5. Data Security</h4>
+                                        <h4 >5. Data Security</h4>
                                         <p className="lead">
                                             We implement appropriate technical and organizational measures to protect your data from unauthorized access, disclosure, or loss.
                                         </p>
@@ -106,7 +90,7 @@ export default function PrivacyPolicy() {
 
 
                                     <div className="mb-10">
-                                        <h4 className="">6. Your Rights</h4>
+                                        <h4 >6. Your Rights</h4>
                                         <p className="lead">
                                             You have the right to:
                                         </p>
@@ -120,7 +104,7 @@ export default function PrivacyPolicy() {
                                     </div>
 
                                     <div className="mb-10">
-                                        <h4 className="">7. Data Retention</h4>
+                                        <h4 >7. Data Retention</h4>
                                         <p className="lead">
                                             We retain your data only for as long as necessary to:
                                         </p>
@@ -132,21 +116,21 @@ export default function PrivacyPolicy() {
                                     </div>
 
                                     <div className="mb-10">
-                                        <h4 className="">8. Children's Privacy</h4>
+                                        <h4 >8. Children&apos;s Privacy</h4>
                                         <p className="lead">
                                             We implement appropriate technical and organizational measures to protect your data from unauthorized access, disclosure, or loss.
                                         </p>
                                     </div>
 
                                     <div className="mb-10">
-                                        <h4 className="">9. Changes to This Policy</h4>
+                                        <h4 >9. Changes to This Policy</h4>
                                         <p className="lead">
                                             We may update this policy from time to time. Revisions will be posted on our website with the new effective date.
                                         </p>
                                     </div>
 
                                     <div>
-                                        <h4 className="">10. Contact Us</h4>
+                                        <h4 >10. Contact Us</h4>
                                         <p className="lead">
                                             If you have any privacy-related questions:
                                         </p>
@@ -162,6 +146,7 @@ export default function PrivacyPolicy() {
                     </div>
                 </div>
             </section>
+
         </>
     )
 }

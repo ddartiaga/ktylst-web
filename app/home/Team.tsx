@@ -1,4 +1,8 @@
+"use client";
+
 import Image from "next/image";
+import { useEffect } from "react";
+import { usePathname } from 'next/navigation';
 
 const teamMembers = [
     {
@@ -40,7 +44,25 @@ const TeamMember = ({ name, image, role, description }: { name: string, image: s
     );
 }
 
+declare global {
+    interface Window {
+        theme: {
+            swiperSlider: () => void;
+        }
+    }
+}
+
+
 export default function Team() {
+    const pathname = usePathname(); // triggers effect on route change
+
+    useEffect(() => {
+        // Initialize Swiper after the component mounts
+        if (typeof window !== 'undefined' && window.theme) {
+            window.theme.swiperSlider();
+        }
+    }, [pathname]); // Re-initialize when route changes
+
     return (<section className="wrapper bg-gradient-primary">
         <div className="container py-10 py-md-12">
             <div className="row gx-lg-8 gx-xl-12 gy-10 align-items-center">

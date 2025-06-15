@@ -1,7 +1,6 @@
 import CompanyProfile from "./home/CompanyProfile";
 import Hero from "./home/Hero";
 import Services from "./home/Services";
-import Team from "./home/Team";
 import Contact from "./contact/Contact";
 import ContactDialog from "./contact/ContactDialog";
 
@@ -22,5 +21,7 @@ export default function Page() {
         </div>
       </div>
     </div>
+
+    
   </>)
 }

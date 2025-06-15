@@ -1,37 +1,5 @@
 
 
-const items = [
-    { title: "End-to-End Solutions", subtitle: "From planning and implementation to maintenance and support", icon: "" },
-    { title: "Agile & Scalable Development", subtitle: "Rapid delivery with room for future growth", icon: "" },
-    { title: "Security & Compliance Focused", subtitle: "Data protection and regulatory compliance are at our core", icon: "" },
-    { title: "Experienced Team", subtitle: "10+ years of experience in procurment, sales, software engineering, DevOps, and IT consulting", icon: "" },
-    { title: "Client-Centered Approach", subtitle: "We build long-term partnerships, not just projects", icon: "" },
-];
-
-const Reason = ({ title, subtitle, icon }: { title: string, subtitle: string, icon: string }) => {
-    return (<div className="col-md-6 col-lg-4">
-        <div className="card">
-            <div className="card-body">
-                <div className="d-flex flex-row">
-                    <div>
-                        <img
-                            src="./assets/img/icons/lineal/target.svg"
-                            className="svg-inject icon-svg icon-svg-sm text-aqua me-4"
-                            alt=""
-                        />
-                    </div>
-                    <div>
-                        <h4 className="mb-1">{title}</h4>
-                        <p className="mb-0">
-                            {subtitle}
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>);
-}
 
 
 export default function WhyChooseUs() {

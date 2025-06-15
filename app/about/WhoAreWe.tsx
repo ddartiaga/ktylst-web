@@ -2,7 +2,6 @@ import Image from "next/image";
 
 export default function WhoAreWe() {
     return (<>
-
         <section className="wrapper bg-light mt-10">
             <div className="container py-10 py-md-12">
                 <div className="row gy-10 gy-sm-13 gx-md-8 gx-xl-12 align-items-center mb-10 mb-md-12">
@@ -10,27 +9,36 @@ export default function WhoAreWe() {
                         <div className="row gx-md-5 gy-5">
                             <div className="col-md-6">
                                 <figure className="rounded">
-                                    <img
+                                    <Image
                                         src="/app/img/young-asian-business-creative-team-work-together.jpg"
-                                        alt=""
+                                        alt="Young Asian business creative team working together"
+                                        width={500}
+                                        height={300}
+                                        className="img-fluid"
                                     />
                                 </figure>
                             </div>
 
                             <div className="col-md-6 align-self-end">
                                 <figure className="rounded">
-                                    <img
+                                    <Image
                                         src="/app/img/group-of-young-asian-business-team-creative-businesspeople.jpg"
-                                        alt=""
+                                        alt="Group of young Asian business team creative businesspeople"
+                                        width={500}
+                                        height={300}
+                                        className="img-fluid"
                                     />
                                 </figure>
                             </div>
 
                             <div className="col-12">
                                 <figure className="rounded mx-md-5">
-                                    <img
+                                    <Image
                                         src="/app/img/business-people-clapping-at-an-office.jpg"
-                                        alt=""
+                                        alt="Business people clapping at an office"
+                                        width={800}
+                                        height={400}
+                                        className="img-fluid"
                                     />
                                 </figure>
                             </div>

@@ -31,15 +31,10 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           <nav className="navbar navbar-expand-lg center-nav transparent position-absolute navbar-dark caret-none">
             <div className="container flex-lg-row flex-nowrap align-items-center">
               <div className="navbar-brand w-100">
-                <a href="/">
-                  <Image className="logo-dark" src="/app/img/kata-logo.png" alt="" width={150} height={75} />
-
-                  {/* <h6 className="logo-dark">KATALYST</h6> */}
-
-                  {/* <img className="logo-light" src="/app/img/kata-logo.png" alt="" /> */}
-                  <Image className="logo-light" src="/app/img/kata-logo.png" alt="" width={150} height={75} />
-                  {/* <h6 className="logo-light text-white">KATALYST</h6> */}
-                </a>
+                <Link href={"/"}>
+                  <Image className="logo-dark" src="/app/img/kata-logo.png" alt="" width={150} height={75} priority />
+                  <Image className="logo-light" src="/app/img/kata-logo.png" alt="" width={150} height={75} priority />
+                </Link>
               </div>
               <div className="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
                 <div className="offcanvas-header d-lg-none">
@@ -54,14 +49,10 @@ export default async function RootLayout({ children }: { children: React.ReactNo
                 <div className="offcanvas-body ms-lg-auto d-flex flex-column h-100">
                   <ul className="navbar-nav">
                     <li className="nav-item">
-                      <a className="nav-link" href="/">
-                        Home
-                      </a>
+                      <Link href={"/"} className="nav-link">Home</Link>
                     </li>
                     <li className="nav-item">
-                      <a className="nav-link" href="/about">
-                        About
-                      </a>
+                      <Link href={"/about"} className="nav-link" >About</Link>
                     </li>
                     <li className="nav-item dropdown">
                       <a
@@ -104,9 +95,10 @@ export default async function RootLayout({ children }: { children: React.ReactNo
                       </a>
                     </li>
                     <li className="nav-item">
-                      <a className="nav-link" href="/contact" >
-                        Contact Us
-                      </a>
+                      <Link href={"/contact"} className="nav-link" >Contact Us</Link>
+                      {/* <a className="nav-link" href="/contact" >
+                        
+                      </a> */}
                     </li>
                   </ul>
                   {/* /.navbar-nav */}
