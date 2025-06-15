@@ -1,4 +1,3 @@
-import Link from "next/link";
 
 const services = [
     {
@@ -45,7 +44,7 @@ const services = [
     }
 ];
 
-const ServiceItem = ({ icon, title, description, link, color }: { icon: string, title: string, description: string, link: string, color: string }) => {
+const ServiceItem = ({ icon, title, description, color }: { icon: string, title: string, description: string, color: string }) => {
     return (<div className="col-md-6 col-lg-4">
         <div className="d-flex flex-row">
             <div>
@@ -84,7 +83,7 @@ export default function Services() {
             </div>
             {/* /.row */}
             <div className="row gx-lg-8 gx-xl-12 gy-8">
-                {services.map((service, idx) => <ServiceItem key={idx} icon={service.icon} title={service.title} description={service.description} link={service.link} color={service.color} />)}
+                {services.map((service, idx) => <ServiceItem key={idx} icon={service.icon} title={service.title} description={service.description} color={service.color} />)}
             </div>
             {/*/.row */}
         </div>

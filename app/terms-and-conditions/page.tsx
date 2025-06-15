@@ -1,28 +1,10 @@
 import Link from "next/link";
+import TermsHero from "./TermsHero";
 
 export default function PrivacyPolicy() {
     return (
         <>
-            <section
-                className="wrapper image-wrapper bg-image bg-overlay text-white"
-                data-image-src="/app/img/terms-and-conditions.jpg"
-            >
-                <div className="container pt-19 pt-md-21 pb-18 pb-md-20 text-center">
-                    <div className="row">
-                        <div className="col-md-10 col-lg-8 col-xl-7 col-xxl-6 mx-auto">
-                            <h1 className="display-1 text-white mb-3">Terms and Conditions</h1>
-                            <p className="lead fs-lg px-md-3 px-lg-7 px-xl-9 px-xxl-10">
-                                Terms and Conditions govern your access to and use of our website and our services and related technology solutions.
-                            </p>
-                        </div>
-                        {/* /column */}
-                    </div>
-                    {/* /.row */}
-                </div>
-                {/* /.container */}
-            </section>
-
-
+            <TermsHero />
             <section className="wrapper bg-light">
                 <div className="container py-10 py-md-12">
                     <div className="row">
@@ -33,12 +15,12 @@ export default function PrivacyPolicy() {
                                     <div className="mb-10">
                                         <div><strong>Effective Date: </strong>January 28, 2025</div>
                                         <div><strong>Last Updated: </strong>June 07, 2025</div>
-                                        <p className="mt-5">Welcome to <strong>Katalyst IT Services</strong> ("Katalyst", "we", "our", or "us"). These Terms and Conditions ("Terms") govern your access to and use of our website and IT services, including custom software development, infrastructure automation, consulting, procurement, and related technology solutions.
+                                        <p className="mt-5">Welcome to <strong>Katalyst IT Services</strong> (&ldquo;Katalyst&rdquo;, &ldquo;we&rdquo;, &ldquo;our&rdquo;, or &ldquo;us&rdquo;). These Terms and Conditions (&ldquo;Terms&rdquo;) govern your access to and use of our website and IT services, including custom software development, infrastructure automation, consulting, procurement, and related technology solutions.
                                             <br /><br />
                                             By accessing or using our services, you agree to these Terms. If you do not agree, do not use our services.</p>
                                     </div>
                                     <div className="mb-10">
-                                        <h4 className="">1. Services Overview</h4>
+                                        <h4 >1. Services Overview</h4>
                                         <p className="lead">
                                             Katalyst offers a wide range of IT solutions including:
                                         </p>
@@ -54,14 +36,14 @@ export default function PrivacyPolicy() {
 
 
                                     <div className="mb-10">
-                                        <h4 className="">2. Eligibility</h4>
+                                        <h4 >2. Eligibility</h4>
                                         <p className="lead">
                                             You must be at least 18 years old or have legal authority to act on behalf of an entity to use our services.
                                         </p>
                                     </div>
 
                                     <div className="mb-10">
-                                        <h4 className="">3. Use of Services</h4>
+                                        <h4 >3. Use of Services</h4>
                                         <p className="lead">
                                             You agree to:
                                         </p>
@@ -74,14 +56,14 @@ export default function PrivacyPolicy() {
                                     </div>
 
                                     <div className="mb-10">
-                                        <h4 className="">4. Intellectual Property</h4>
+                                        <h4 >4. Intellectual Property</h4>
 
                                         <p className="lead">All content, designs, source code, and documentation developed by Katalyst remain our property unless otherwise stated in a written agreement. Any tools or reusable code components may be licensed to the client for use but not transferred outright.</p>
                                     </div>
 
 
                                     <div className="mb-10">
-                                        <h4 className="">5. Confidentiality</h4>
+                                        <h4 >5. Confidentiality</h4>
                                         <p className="lead">
                                             Both parties agree to maintain the confidentiality of all non-public information shared during service delivery. This obligation continues even after the engagement ends.
                                         </p>
@@ -90,14 +72,14 @@ export default function PrivacyPolicy() {
 
 
                                     <div className="mb-10">
-                                        <h4 className="">6. Payment Terms</h4>
+                                        <h4 >6. Payment Terms</h4>
                                         <p className="lead">
                                             Fees and payment schedules are defined in the service agreement. Invoices are due based on the agreed timeline. Late payments may incur interest and could result in service suspension.
                                         </p>
                                     </div>
 
                                     <div className="mb-10">
-                                        <h4 className="">7. Warranties & Disclaimers</h4>
+                                        <h4 >7. Warranties & Disclaimers</h4>
                                         <p className="lead">
                                             We strive to deliver high-quality services, but we do not warrant that:
                                         </p>
@@ -106,11 +88,11 @@ export default function PrivacyPolicy() {
                                             <li>Software will meet every use case unless specified</li>
                                             <li>ICT Equipments are defect-free</li>
                                         </ul>
-                                        <div>All services are provided “as is” unless otherwise agreed in writing.</div>
+                                        <div>All services are provided &ldquo;as is&ldquo; unless otherwise agreed in writing.</div>
                                     </div>
 
                                     <div className="mb-10">
-                                        <h4 className="">8. Limitation of Liability</h4>
+                                        <h4 >8. Limitation of Liability</h4>
                                         <p className="lead">
                                             Katalyst is not liable for indirect, incidental, or consequential damages, including lost profits or data, arising from your use of our services.
                                             <br /><br />
@@ -119,7 +101,7 @@ export default function PrivacyPolicy() {
                                     </div>
 
                                     <div className="mb-10">
-                                        <h4 className="">9. Termination</h4>
+                                        <h4 >9. Termination</h4>
                                         <p className="lead">
                                             We may terminate services if:
                                         </p>
@@ -132,14 +114,14 @@ export default function PrivacyPolicy() {
                                     </div>
 
                                     <div className="mb-10">
-                                        <h4 className="">10. Governing Law</h4>
+                                        <h4 >10. Governing Law</h4>
                                         <p className="lead">
                                             These Terms shall be governed by the laws of the <strong>Republic of the Philippines</strong>, unless otherwise specified in a separate agreement.
                                         </p>
                                     </div>
 
                                     <div>
-                                        <h4 className="">11. Contact Us</h4>
+                                        <h4 >11. Contact Us</h4>
                                         <p className="lead">
                                             For questions or concerns:
                                         </p>

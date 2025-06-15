@@ -1,7 +1,6 @@
 import CompanyProfile from "./home/CompanyProfile";
 import Hero from "./home/Hero";
 import Services from "./home/Services";
-import Team from "./home/Team";
 import Contact from "./contact/Contact";
 import ContactDialog from "./contact/ContactDialog";
 
@@ -10,7 +9,7 @@ export default function Page() {
     <Hero />
     <CompanyProfile />
     <Services />
-    <Team />
+
     <Contact />
     <div className="modal fade" id="contact-form" tabIndex={-1}>
       <div className="modal-dialog modal-dialog-centered modal-xl">
@@ -22,5 +21,7 @@ export default function Page() {
         </div>
       </div>
     </div>
+
+    
   </>)
 }

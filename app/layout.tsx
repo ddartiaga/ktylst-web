@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import Script from 'next/script'
 import Link from "next/link";
+import Image from "next/image";
 
 import "@/public/assets/css/plugins.css";
 import "@/public/assets/css/style.css";
@@ -30,13 +31,10 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           <nav className="navbar navbar-expand-lg center-nav transparent position-absolute navbar-dark caret-none">
             <div className="container flex-lg-row flex-nowrap align-items-center">
               <div className="navbar-brand w-100">
-                <a href="./index.html">
-                  {/* <img class="logo-dark" src="./assets/img/logo.png" srcset="./assets/img/logo@2x.png 2x" alt="" /> */}
-                  <h6 className="logo-dark">KATALYST</h6>
-                  {/* <img class="logo-light" src="./assets/img/logo-light.png" srcset="./assets/img/logo-light@2x.png 2x"
-          alt="" /> */}
-                  <h6 className="logo-light text-white">KATALYST</h6>
-                </a>
+                <Link href={"/"}>
+                  <Image className="logo-dark" src="/app/img/kata-logo.png" alt="" width={150} height={75} priority />
+                  <Image className="logo-light" src="/app/img/kata-logo.png" alt="" width={150} height={75} priority />
+                </Link>
               </div>
               <div className="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
                 <div className="offcanvas-header d-lg-none">
@@ -51,14 +49,10 @@ export default async function RootLayout({ children }: { children: React.ReactNo
                 <div className="offcanvas-body ms-lg-auto d-flex flex-column h-100">
                   <ul className="navbar-nav">
                     <li className="nav-item">
-                      <a className="nav-link" href="/">
-                        Home
-                      </a>
+                      <Link href={"/"} className="nav-link">Home</Link>
                     </li>
                     <li className="nav-item">
-                      <a className="nav-link" href="#" data-bs-toggle="dropdown">
-                        About
-                      </a>
+                      <Link href={"/about"} className="nav-link" >About</Link>
                     </li>
                     <li className="nav-item dropdown">
                       <a
@@ -101,9 +95,10 @@ export default async function RootLayout({ children }: { children: React.ReactNo
                       </a>
                     </li>
                     <li className="nav-item">
-                      <a className="nav-link" href="/contact" >
-                        Contact Us
-                      </a>
+                      <Link href={"/contact"} className="nav-link" >Contact Us</Link>
+                      {/* <a className="nav-link" href="/contact" >
+                        
+                      </a> */}
                     </li>
                   </ul>
                   {/* /.navbar-nav */}
@@ -142,7 +137,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
                       <i className="uil uil-info-circle" />
                     </a>
                   </li>
-                  <li className="nav-item">
+                  {/* <li className="nav-item">
                     <a
                       className="nav-link"
                       data-bs-toggle="offcanvas"
@@ -150,7 +145,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
                     >
                       <i className="uil uil-search" />
                     </a>
-                  </li>
+                  </li> */}
                   <li className="nav-item d-lg-none">
                     <button className="hamburger offcanvas-nav-btn">
                       <span />
@@ -199,22 +194,25 @@ export default async function RootLayout({ children }: { children: React.ReactNo
               <div className="widget mb-8">
                 <h4 className="widget-title text-white mb-3">Learn More</h4>
                 <ul className="list-unstyled">
-                  <li>
+                  {/* <li>
                     <a href="#">Our Story</a>
+                  </li> */}
+                  <li>
+                    <a href="/about">About Us</a>
                   </li>
                   <li>
-                    <a href="#">Terms of Use</a>
+                    <a href="/terms-and-conditions">Terms of Use</a>
                   </li>
                   <li>
-                    <a href="#">Privacy Policy</a>
+                    <a href="/privacy-policy">Privacy Policy</a>
                   </li>
                   <li>
-                    <a href="#">Contact Us</a>
+                    <a href="/contact">Contact Us</a>
                   </li>
                 </ul>
               </div>
               {/* /.widget */}
-              <div className="widget">
+              {/* <div className="widget">
                 <h4 className="widget-title text-white mb-3">Follow Us</h4>
                 <nav className="nav social social-white">
                   <a href="#">
@@ -233,8 +231,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
                     <i className="uil uil-youtube" />
                   </a>
                 </nav>
-                {/* /.social */}
-              </div>
+              </div> */}
               {/* /.widget */}
             </div>
             {/* /.offcanvas-body */}
@@ -273,13 +270,8 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           <div className="row gy-6 gy-lg-0">
             <div className="col-md-4 col-lg-3">
               <div className="widget">
-                <img
-                  className="mb-4"
-                  src="./assets/img/logo-light.png"
-                  srcSet="./assets/img/logo-light@2x.png 2x"
-                  alt=""
-                />
-                <p className="mb-4">
+                <Image className="mb-4" src="/app/img/kata-logo.png" alt="" width={200} height={100} />
+                <p className="mb-4 px-5">
                   © KATALYST IT SERVICES<br className="d-none d-lg-block" />
                   All rights reserved.
                 </p>
@@ -303,7 +295,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
                 <h4 className="widget-title text-white mb-3">Learn More</h4>
                 <ul className="list-unstyled  mb-0">
                   <li>
-                    <a href="#">About Us</a>
+                    <a href="/about">About Us</a>
                   </li>
                   <li>
                     <a href="#">Our Story</a>

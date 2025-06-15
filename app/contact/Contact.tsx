@@ -7,7 +7,7 @@ export default function Contact() {
                 <div className="col-xl-12 mx-auto">
                     <div className="text-center">
                         <h3 className="display-5 mb-7">
-                            Got any questions? Don't hesitate to get in touch.
+                            Got any questions? Don&apos;t hesitate to get in touch.
                         </h3>
                     </div>
                     <ContactWithMap />
