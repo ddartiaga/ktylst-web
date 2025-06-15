@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import Script from 'next/script'
 import Link from "next/link";
+import Image from "next/image";
 
 import "@/public/assets/css/plugins.css";
 import "@/public/assets/css/style.css";
@@ -30,12 +31,14 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           <nav className="navbar navbar-expand-lg center-nav transparent position-absolute navbar-dark caret-none">
             <div className="container flex-lg-row flex-nowrap align-items-center">
               <div className="navbar-brand w-100">
-                <a href="./index.html">
-                  {/* <img class="logo-dark" src="./assets/img/logo.png" srcset="./assets/img/logo@2x.png 2x" alt="" /> */}
-                  <h6 className="logo-dark">KATALYST</h6>
-                  {/* <img class="logo-light" src="./assets/img/logo-light.png" srcset="./assets/img/logo-light@2x.png 2x"
-          alt="" /> */}
-                  <h6 className="logo-light text-white">KATALYST</h6>
+                <a href="/">
+                  <Image className="logo-dark" src="/app/img/kata-logo.png" alt="" width={150} height={75} />
+
+                  {/* <h6 className="logo-dark">KATALYST</h6> */}
+
+                  {/* <img className="logo-light" src="/app/img/kata-logo.png" alt="" /> */}
+                  <Image className="logo-light" src="/app/img/kata-logo.png" alt="" width={150} height={75} />
+                  {/* <h6 className="logo-light text-white">KATALYST</h6> */}
                 </a>
               </div>
               <div className="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
@@ -275,13 +278,8 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           <div className="row gy-6 gy-lg-0">
             <div className="col-md-4 col-lg-3">
               <div className="widget">
-                <img
-                  className="mb-4"
-                  src="./assets/img/logo-light.png"
-                  srcSet="./assets/img/logo-light@2x.png 2x"
-                  alt=""
-                />
-                <p className="mb-4">
+                <Image className="mb-4" src="/app/img/kata-logo.png" alt="" width={200} height={100} />
+                <p className="mb-4 px-5">
                   © KATALYST IT SERVICES<br className="d-none d-lg-block" />
                   All rights reserved.
                 </p>
