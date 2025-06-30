@@ -6,22 +6,16 @@ import { usePathname } from 'next/navigation';
 
 const teamMembers = [
     {
-        name: "Dudz Artiaga",
+        name: "Dudz A.",
         image: "/app/img/team/dudz.jpg",
         role: "Head of Software Development",
         description: "Dudz is a software architect with 10+ years of experience and AWS Cloud Developer certification, focused on building scalable and efficient solutions."
     },
     {
-        name: "Ninz Artiaga",
+        name: "Ninz A.",
         image: "/app/img/team/nina3.jpg",
         role: "Head of Sales and Operations",
         description: "Ninz is a sales and operations professional with 10 years of experience in the government sector, known for building strong relationships and driving results."
-    },
-    {
-        name: "Jocelle Allen Alminar",
-        image: "/assets/img/avatars/t3.jpg",
-        role: "Head of Procurement",
-        description: "Jocelle is a procurement expert with 5+ years of experience in sourcing, vendor management, and cost optimization."
     }
 ];
 
@@ -86,12 +80,12 @@ export default function Team() {
                         className="swiper-container text-center mb-6"
                         data-margin={30}
                         data-dots="true"
-                        data-items-xl={3}
+                        data-items-xl={2}
                         data-items-md={2}
                         data-items-xs={1}
                     >
-                        <div className="swiper">
-                            <div className="swiper-wrapper">
+                        <div className="swiper ">
+                            <div className="swiper-wrapper d-flex justify-content-evenly">
                                 {teamMembers.map((member, index) => (
                                     <TeamMember key={index} {...member} />
                                 ))}
